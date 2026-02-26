@@ -2,6 +2,7 @@
 
 Claude Code plugin for commanding a Starkbot agent via the External Channel Gateway API.
 
+![robot1](https://github.com/user-attachments/assets/486cf36b-a0ac-4623-8410-c4cc93388ba1)
 
 
 ## Prerequisites 
