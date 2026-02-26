@@ -2,6 +2,18 @@
 
 Claude Code plugin for commanding a Starkbot agent via the External Channel Gateway API.
 
+
+
+## Prerequisites 
+
+```
+1. In your starkbot instance, click on Channels and create an External Gateway, turn it on
+
+2. Copy the STARK_URL and STARK_TOKEN 
+
+```
+
+
 ## Quick Start
 
 ### 1. Add the marketplace
