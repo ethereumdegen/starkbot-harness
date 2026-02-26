@@ -17,26 +17,20 @@ Claude Code plugin for commanding a Starkbot agent via the External Channel Gate
 
 ## Quick Start
 
-### 1. Add the marketplace
+### 1. Install
 
 ```
-/plugin marketplace add ethereumdegen/starkbot-harness
+npx skills add ethereumdegen/starkbot-harness
 ```
 
-### 2. Install the plugin
-
-```
-/plugin install starkbot-harness@starkbot-harness
-```
-
-### 3. Set environment variables
+### 2. Set environment variables
 
 ```bash
 export STARK_URL="https://your-starkbot-instance.com"
 export STARK_TOKEN="your-bearer-token"
 ```
 
-### 4. Use it
+### 3. Use it
 
 ```
 /starkbot-harness:stark hello, what can you do?
