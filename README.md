@@ -2,34 +2,34 @@
 
 Claude Code plugin for commanding a Starkbot agent via the External Channel Gateway API.
 
-## Setup
+## Quick Start
 
-### 1. Set environment variables
+### 1. Add the marketplace
 
-```bash
-export STARK_URL="http://localhost:3000"   # Your Starkbot instance URL
-export STARK_TOKEN="your-bearer-token"     # API authentication token
-export STARK_SESSION=""                     # Optional: session ID for persistence
+```
+/plugin marketplace add ethereumdegen/starkbot-harness
 ```
 
 ### 2. Install the plugin
 
-**Local development:**
-```bash
-claude --plugin-dir ~/ai/starkbot-harness
+```
+/plugin install starkbot-harness@starkbot-harness
 ```
 
-## Usage
+### 3. Set environment variables
 
-### Slash command
+```bash
+export STARK_URL="https://your-starkbot-instance.com"
+export STARK_TOKEN="your-bearer-token"
+```
+
+### 4. Use it
 
 ```
 /starkbot-harness:stark hello, what can you do?
 ```
 
-### Auto-invocation
-
-Claude will automatically use the Starkbot Gateway skill when interaction with a Starkbot agent is contextually relevant.
+Claude will also auto-invoke the Starkbot Gateway skill when interaction with your agent is contextually relevant.
 
 ## API Endpoints
 
@@ -40,3 +40,17 @@ Claude will automatically use the Starkbot Gateway skill when interaction with a
 | POST | `/api/gateway/sessions/new` | Create new session |
 | GET | `/api/gateway/sessions` | List sessions |
 | GET | `/api/gateway/sessions/{id}/messages` | Get message history |
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `STARK_URL` | Yes | Base URL of your Starkbot instance |
+| `STARK_TOKEN` | Yes | Bearer token for API authentication |
+| `STARK_SESSION` | No | Session ID for conversation persistence |
+
+## Local Development
+
+```bash
+claude --plugin-dir ~/ai/starkbot-harness
+```
